@@ -11,7 +11,9 @@
 //输出: "bb"
 class LongestPalindrome {
 
-    fun longestPalindrome(s: String): String {
+    fun longestPalindrome(s: String):
+
+            String {
         return Solution2().longestPalindrome(s)
     }
 
@@ -21,9 +23,13 @@ class LongestPalindrome {
      * 时间复杂度 O(n^3)
      * 空间复杂度 O(1)
      */
-    inner class Solution1 {
+    inner
 
-        fun longestPalindrome(s: String): String {
+    class Solution1 {
+
+        fun longestPalindrome(s: String):
+
+                String {
             var maxLength = 0
             var result = ""
             for (i in 0..s.length) {
@@ -40,7 +46,9 @@ class LongestPalindrome {
             return result
         }
 
-        fun isPalindrome(s: String): Boolean {
+        fun isPalindrome(s: String):
+
+                Boolean {
             var isPalindrome = true
             for (i in 0..s.length / 2) {
                 if (s[i] != s[s.length - i - 1]) {
@@ -51,8 +59,12 @@ class LongestPalindrome {
         }
     }
 
-    inner class Solution2 {
-        fun longestPalindrome(s: String): String {
+    inner
+
+    class Solution2 {
+        fun longestPalindrome(s: String):
+
+                String {
             var maxLength = 0
             var result = ""
 
@@ -80,7 +92,9 @@ class LongestPalindrome {
             return result
         }
 
-        fun getPalindrome(s: String, left: Int, right: Int): String {
+        fun getPalindrome(s: String, left: Int, right: Int):
+
+                String {
             var center = s.substring(left, right + 1)
             var same = false
             for (i in 0..center.length) {
@@ -98,7 +112,9 @@ class LongestPalindrome {
             return center
         }
 
-        fun getSameText(s: String, left: Int, right: Int): String {
+        fun getSameText(s: String, left: Int, right: Int):
+
+                String {
             var finalLeft = left
             var finalRight = right
             if (left > 0) {
